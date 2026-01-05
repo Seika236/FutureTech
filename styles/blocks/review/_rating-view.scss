@@ -1,0 +1,32 @@
+@use "../../helpers/index" as *;
+
+.rating-view {
+  display: inline-flex;
+  align-items: center;
+  column-gap: rem(7);
+  padding: rem(10) rem(16);
+  border: var(--border-dark-15);
+  border-radius: var(--border-radius-hage);
+  background-color: var(--color-dark);
+
+  @include laptop {
+    padding: rem(8) rem(12);
+    column-gap: rem(4);
+  }
+
+  &__star {
+    --size: #{rem(24)};
+
+    @include square(var(--size));
+
+    background: url("../../../icons/star__gray.svg") center/contain no-repeat;
+
+    &.is-active {
+      background-image: url("../../../icons/star__gold.svg");
+    }
+
+    @include laptop {
+      --size: #{rem(20)};
+    }
+  }
+}

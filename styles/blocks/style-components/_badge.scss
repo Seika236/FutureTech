@@ -1,0 +1,35 @@
+@use "../../helpers" as *;
+
+.badge {
+  position: relative;
+  padding: fluid(4, 2) fluid(14, 10);
+  color: var(--color-light);
+  background-color: var(--color-dark-10);
+  font-size: rem(16);
+  z-index: 0;
+
+  @include laptop {
+    font-size: rem(14);
+  }
+
+  &::before {
+    @include abs-center;
+
+    content: '';
+    display: inline-flex;
+    padding: 1px;
+    width: 100%;
+    border-radius: rem(6);
+    height: 100%;
+    background-image: var(--gradient);
+    -webkit-mask:
+      linear-gradient(var(--color-light) 0 0) content-box,
+      linear-gradient(var(--color-light) 0 0);
+    mask-composite: exclude;
+    z-index: -1;
+
+    @include laptop {
+      border-radius: rem(4);
+    }
+  }
+}

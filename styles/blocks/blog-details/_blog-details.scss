@@ -1,0 +1,158 @@
+@use "../../helpers/index" as *;
+
+.blog-details {
+  overflow-x: hidden;
+
+  &__banner {
+    @include linear-dark-gradient(-10%);
+
+    display: flex;
+    align-items: end;
+    min-height: fluid(598, 281);
+    padding-block: fluid(65, 17);
+    background: var(--bgImg) center/cover no-repeat;
+    text-align: center;
+
+    @include tablet {
+      background-image: url("../../../images/blog-details/bg-image-1-mobile.jpeg");
+    }
+
+    &-inner {
+      display: flex;
+      align-items: end;
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-size: fluid(64, 28);
+    font-family: var(--font-family-base);
+    font-weight: 600;
+  }
+
+  &__body {
+    border-block: var(--border-dark-15);
+
+    h2 {
+      font-family: var(--font-family-base);
+      font-weight: 500;
+    }
+
+    &-inner {
+      display: grid;
+      grid-template-columns: 1fr rem(520);
+
+      @include tablet {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      &:not(:first-child) {
+        margin-bottom: 1.5em;
+      }
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      &:not(:last-child) {
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  &__content {
+    @include tablet-above {
+      padding-right: var(--blogDetailsContentPadding);
+    }
+  }
+
+  &__intro,
+  &__main,
+  &__summary,
+  &__action {
+    padding: fluid(80, 40) rem(80);
+
+    @include laptop {
+      padding-inline: rem(60);
+    }
+
+    @include tablet {
+      padding-inline: 0;
+    }
+  }
+
+  &__intro,
+  &__summary,
+  &__action {
+    @include tablet {
+      @include full-wv-centered-line(top);
+    }
+  }
+
+  @include tablet-above {
+    &__intro,
+    &__action {
+      border-bottom: var(--border-dark-15);
+    }
+  }
+
+  &__intro,
+  &__main {
+    padding-left: 0;
+  }
+
+  &__action,
+  &__summary {
+    padding-right: 0;
+  }
+
+  &__action {
+    padding-block: fluid(50, 20);
+  }
+
+  &__intro {
+    display: grid;
+    row-gap: rem(14);
+
+    @include laptop {
+      row-gap: rem(6);
+    }
+  }
+
+  &__main {
+    --initialMaxHeight: #{rem(741)};
+    --offsetMarginBottom: #{rem(20)};
+
+    @include laptop {
+      --initialMaxHeight: #{rem(692)};
+    }
+
+    @include mobile {
+      --initialMaxHeight: #{rem(669)};
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    @include tablet-above {
+      padding-left: var(--blogDetailsContentPadding);
+      border-left: var(--border-dark-15);
+    }
+
+    @include tablet {
+      align-items: center;
+    }
+  }
+}

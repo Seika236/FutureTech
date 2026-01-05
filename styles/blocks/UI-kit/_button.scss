@@ -1,0 +1,51 @@
+@use "../../helpers" as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--button-height);
+  border: var(--border-dark-15);
+  border-radius: rem(12);
+  padding: rem(18) rem(24);
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: var(--color-dark);
+  color: var(--color-gray-60);
+
+  @include laptop {
+    padding: rem(14) rem(20);
+    font-size: 14px;
+    border-radius: rem(8);
+  }
+
+  @include hover {
+    color: var(--color-accent);
+    background-color: var(--color-dark-10);
+    border-color: var(--color-accent);
+  }
+
+  &--accent {
+    padding: rem(14) rem(20);
+    border-radius: rem(10);
+    border-color: var(--color-accent);
+    background-color: var(--color-accent);
+    font-weight: 500;
+    color: var(--color-dark);
+
+    @include laptop {
+      border-radius: rem(8);
+    }
+
+    @include hover {
+      color: var(--color-accent);
+      background-color: var(--color-dark);
+      border-color: var(--color-accent);
+    }
+  }
+
+  &--dark-gray {
+    background-color: var(--color-dark-10);
+  }
+}

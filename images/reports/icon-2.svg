@@ -1,0 +1,16 @@
+<svg width="80.000000" height="80.000000" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip226_12202">
+			<rect id="Icon" rx="0.000000" width="79.000000" height="79.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip226_12202)">
+		<path id="Rectangle 79" d="M66.8 13.19C74.3 20.69 73.58 33.55 65.29 41.84L50.21 56.92L23.07 29.78L38.15 14.7C46.44 6.41 59.3 5.7 66.8 13.19Z" fill="#FFD11A" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Ellipse 103" d="M35.14 71.99L8 44.85C16.32 36.53 29.15 35.85 36.64 43.35C44.14 50.84 43.46 63.67 35.14 71.99Z" fill="#404040" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Ellipse 104" d="M63.78 70.49L36.64 43.35C44.97 35.02 57.8 34.34 65.29 41.84C72.79 49.33 72.11 62.16 63.78 70.49Z" fill="#FFD11A" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Ellipse 105" d="M36.64 43.35L9.5 16.21C17.83 7.88 30.66 7.2 38.15 14.7C45.65 22.19 44.97 35.02 36.64 43.35Z" fill="#FFD11A" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

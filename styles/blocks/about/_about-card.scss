@@ -1,0 +1,21 @@
+@use "../../helpers/index" as *;
+
+.about-card {
+  flex-direction: column;
+  row-gap: fluid(20, 10);
+
+  @include hover {
+    background-color: var(--color-dark-15);
+    .about-card__title {
+      color: var(--color-accent);
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-family-base);
+    font-weight: 600;
+    font-size: fluid(24, 16);
+  }
+}

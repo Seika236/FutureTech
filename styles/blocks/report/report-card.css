@@ -1,0 +1,43 @@
+.report-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(1.25rem, 1.0906862745rem + 0.6535947712vw, 1.875rem);
+  height: 100%;
+}
+.report-card__image {
+  width: 100%;
+  height: 18.125rem;
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
+@media (width <= 47.99875rem) {
+  .report-card__image {
+    height: 14rem;
+  }
+}
+.report-card__body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.875rem;
+}
+@media (width <= 90.06125rem) {
+  .report-card__body {
+    row-gap: 0.625rem;
+  }
+}
+.report-card__actions {
+  display: flex;
+  column-gap: 1.25rem;
+  justify-content: space-between;
+}
+@media (width <= 90.06125rem) {
+  .report-card__actions {
+    column-gap: 0.625rem;
+  }
+}
+.report-card__ditails-link, .report-card__download-link {
+  width: 100%;
+}
+
+/*# sourceMappingURL=report-card.css.map */

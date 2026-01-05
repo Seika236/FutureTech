@@ -1,0 +1,40 @@
+@use "../../helpers/index" as *;
+
+.advantage-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(30);
+
+  @include laptop {
+    row-gap: rem(20);
+  }
+
+  @include mobile {
+    row-gap: rem(14);
+  }
+
+  &__image {
+    @include mobile {
+      width: rem(30);
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(4);
+    align-items: start;
+    color: var(--color-gray-50);
+  }
+
+  &__details {
+    font-size: fluid(20, 14);
+    font-family: var(--font-family-accent);
+
+    @include mobile {
+      --rowGapOffsetTop: #{rem(6)};
+
+      margin-top: calc(var(--rowGapOffsetTop) * -1);
+    }
+  }
+}

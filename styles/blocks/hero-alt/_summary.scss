@@ -1,0 +1,52 @@
+@use "../../helpers" as *;
+
+.summary {
+  --columnCount: 3;
+
+  &--2-cols {
+    --columnCount: 2;
+
+    .summary__list {
+      gap: rem(30) rem(20);
+
+      @include laptop {
+        row-gap: rem(20);
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(var(--columnCount), auto);
+    column-gap: fluid(50, 20);
+    row-gap: rem(4);
+    width: fit-content;
+
+    @include laptop {
+      row-gap: rem(2);
+    }
+  }
+
+  &__item {
+    display: grid;
+    row-gap: rem(4);
+
+    @include laptop {
+      row-gap: rem(2);
+    }
+
+    &--wide {
+      grid-column: -1/1;
+      row-gap: fluid(16, 10);
+      padding-top: rem(20);
+
+      @include laptop {
+        padding-top: rem(10);
+      }
+    }
+  }
+
+  &__value {
+    color: var(--color-light);
+  }
+}

@@ -1,0 +1,54 @@
+@use "helpers" as *;
+
+:root {
+  --color-light: #ffffff;
+  --color-dark: #141414;
+  --color-dark-10: #1a1a1a;
+  --color-dark-15: #262626;
+  --color-dark-20: #333333;
+  --color-dark-40: #666666;
+
+  --color-gray-50: #7e7e81;
+  --color-gray-60: #98989a;
+  --color-gray-80: #cccccc;
+
+
+  --color-accent: #ffd11a;
+  --color-red: #ff5500;
+
+  --gradient: linear-gradient(
+    45deg,
+    var(--color-dark-15) 70%,
+    var(--color-accent) 140%
+  );
+
+  --border-dark-15: #{rem(1)} solid var(--color-dark-15);
+  --border-dark-20: #{rem(1)} solid var(--color-dark-20);
+  --border-dark-light: #{rem(1)} solid var(--color-dark-40);
+
+  --border-radius: #{rem(10)};
+  --border-radius-large: #{rem(12)};
+  --border-radius-huge: #{rem(100)};
+
+  @include laptop {
+    --border-radius: #{rem(8)};
+  }
+
+  @include mobile {
+    --border-radius-large: #{rem(8)};
+  }
+
+  --button-height: #{rem(63)};
+
+  --font-family-base: "Inter", sans-serif;
+  --font-family-accent: "Kumbh Sans", sans-serif;
+
+  --container-width: #{rem(1600)};
+  --container-padding-x: #{rem(16)};
+
+  @include laptop {
+    --container-width: #{rem(1280)};
+  }
+
+  --transition-duration: 0.2s;
+}

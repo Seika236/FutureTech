@@ -1,0 +1,26 @@
+@use "../../helpers" as *;
+
+.grid {
+  --gridColumn: 0;
+
+  display: grid;
+  grid-template-columns: repeat(var(--gridColumn), 1fr);
+
+  @for $i from 2 through 12 {
+      &--#{$i} {
+        --gridColumn: #{$i};
+      }
+  };
+
+  @include tablet {
+    &--5 {
+      --gridColumn: 3;
+    }
+  };
+
+  @include mobile {
+    &--5 {
+      --gridColumn: 2;
+    }
+  }
+}

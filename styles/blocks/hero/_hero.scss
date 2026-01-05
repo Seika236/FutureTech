@@ -1,0 +1,153 @@
+@use "../../helpers" as *;
+
+.hero {
+  &__main {
+    @include tablet-above {
+      display: grid;
+      grid-template-columns: 60% auto;
+      grid-template-areas:
+        "body resources-preview"
+        "metrics resources-preview";
+      border-top: rem(1) solid transparent;
+    }
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__body {
+    --heroBodyPaddingRight: #{rem(50)};
+
+    grid-area: body;
+    padding-right: var(--heroBodyPaddingRight);
+    padding-block: rem(150) rem(100);
+
+    @include laptop {
+      --heroBodyPaddingRight: #{rem(40)};
+      padding-block: rem(100);
+    }
+
+    @include tablet {
+      padding-block: rem(40) rem(30);
+      --heroBodyPaddingRight: 0;
+    }
+  }
+
+  &__subtitle {
+    --marginBottom: #{rem(30)};
+
+    @include fluid-text(30, 18);
+
+    font-family: var(--font-family-accent);
+    font-weight: 500;
+    color: var(--color-dark-40);
+
+    &:not(:last-child) {
+      margin-bottom: var(--marginBottom);
+    }
+
+    @include mobile {
+      --marginBottom: #{rem(14)};
+    }
+  }
+
+  &__title {
+    --marginBottom: #{rem(20)};
+
+    &:not(:last-child) {
+      margin-bottom: var(--marginBottom);
+    }
+
+    @include mobile {
+      --marginBottom: #{rem(10)};
+    }
+  }
+
+  &__metrics {
+    grid-area: metrics;
+
+    @include laptop-above {
+      border-top: var(--border-dark-20);
+    }
+
+    @include tablet {
+      &::before {
+        width: 100vw;
+        right: calc(var(--container-padding-x) * -1);
+      }
+    }
+  }
+
+  &__resources-preview {
+    --resourcesPreviewPadding: #{fluid(80, 40)};
+
+    @include mobile-above {
+      border-left: var(--border-dark-15);
+    }
+
+    @include tablet {
+      padding-right: var(--resourcesPreviewPadding);
+      padding-top: rem(100);
+      border-left: none;
+      background-size: contain;
+      background-image: url("../../../images/resources-preview/bg_tablet.png");
+    }
+
+    grid-area: resources-preview;
+    padding-left: var(--resourcesPreviewPadding);
+    padding-bottom: var(--resourcesPreviewPadding);
+
+    background-image: url("../../../images/resources-preview/bg.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__advantages {
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-block: var(--border-dark-20);
+
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+      }
+
+      @include mobile-s {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &-item {
+      --paddingX: #{rem(80)};
+
+      padding-block: fluid(50, 30);
+
+      @include laptop {
+        --paddingX: #{rem(50)};
+      }
+
+      @include tablet {
+        --paddingX: 0;
+      }
+
+      &:not(:first-child) {
+        padding-left: var(--paddingX);
+      }
+
+      &:not(:last-child) {
+        padding-right: var(--paddingX);
+        border-right: var(--border-dark-15);
+
+        @include tablet {
+          border-right: none;
+        }
+
+        @include mobile-s {
+          border-bottom: var(--border-dark-15);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@use "../../helpers/index" as *;
+
+.about {
+  --subtitleOffsetBottom: #{rem(16)};
+  --titleOffsetBottom: #{fluid(30, 4)};
+
+  background-color: var(--color-dark-10);
+  padding-block: fluid(120, 40);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(100, 40);
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "icon info"
+      "icon description";
+    align-items: center;
+    gap: rem(30) fluid(80, 20);
+
+    @include laptop {
+      row-gap: rem(20);
+    }
+
+    @include mobile {
+      row-gap: rem(4);
+      grid-template-areas:
+        "icon subtitle"
+        "title title"
+        "description description";
+    }
+  }
+
+  &__info {
+    grid-area: info;
+    display: grid;
+    row-gap: rem(16);
+
+    @include laptop {
+      row-gap: rem(10);
+    }
+
+    @include mobile {
+      display: contents;
+    }
+  }
+
+  &__icon {
+    grid-area: icon;
+    width: fluid(150, 60);
+  }
+
+  &__subtitle {
+    justify-self: start;
+  }
+
+  &__title {
+    @include mobile {
+      grid-area: title;
+      margin-top: rem(20);
+    }
+  }
+
+  &__description {
+    grid-area: description;
+  }
+
+  &__list {
+    --aboutListPadding: #{rem(20)};
+
+    display: grid;
+    justify-content: center;
+    padding: var(--aboutListPadding);
+    border-radius: rem(12);
+    background-color: var(--color-dark);
+    gap: var(--aboutListPadding);
+
+    @include tablet-above {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include laptop {
+      --aboutListPadding: #{rem(10)};
+      border-radius: rem(10);
+    }
+  }
+}

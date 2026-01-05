@@ -1,0 +1,75 @@
+@use "normalize";
+@use "fonts";
+@use "variables";
+@use "utils";
+@use "globals";
+
+//Import style-components
+@use "blocks/style-components/icon";
+@use "blocks/style-components/grid";
+@use "blocks/style-components/badge";
+@use "blocks/style-components/list";
+@use "blocks/style-components/tile";
+@use "blocks/style-components/tag";
+@use "blocks/style-components/bordered-grid";
+@use "blocks/style-components/expandable";
+
+//Import UI-kit
+@use "blocks/UI-kit/button";
+
+//Import header
+@use "blocks/header/burger-button";
+@use "blocks/header/logo";
+@use "blocks/header/header";
+
+//Import Hero
+@use "blocks/hero/advantage-card";
+@use "blocks/hero/metrics";
+@use "blocks/hero/team";
+@use "blocks/hero/hero";
+@use "blocks/hero/resource-preview";
+
+//Import section
+@use "blocks/section/card";
+@use "blocks/section/section";
+
+//Import blog
+@use "blocks/blog/blog-card";
+@use "blocks/blog/blog-actions";
+@use "blocks/blog/tabs";
+@use "blocks/blog/person-card";
+
+//Import resources
+@use "blocks/resources/download-info";
+
+//Import review
+@use "blocks/review/review-card";
+@use "blocks/review/rating-view";
+
+//Import about
+@use "blocks/about/about";
+@use "blocks/about/about-card";
+
+//Import hero-alt
+@use "blocks/hero-alt/hero-alt";
+@use "blocks/hero-alt/news-card";
+@use "blocks/hero-alt/news";
+@use "blocks/hero-alt/summary";
+
+//Import video
+@use "blocks/video/video-card";
+@use "blocks/video/video-player";
+
+//Import blog-detaisl
+@use "blocks/blog-details/blog-details";
+@use "blocks/blog-details/table-of-contents";
+
+//Import reports
+@use "blocks/report/report-card";
+
+//Import footer
+@use "blocks/footer/footer";
+@use "blocks/footer/soc1als";
+
+
+
